@@ -34,7 +34,7 @@ import voice_io
 from progress_store import record_attempt, get_topic_record
 from config import GROQ_API_KEY
 
-st.set_page_config(page_title=" VidyaAI Tutor", page_icon="🎙️", layout="centered")
+st.set_page_config(page_title="Voice AI Tutor", page_icon="🎙️", layout="centered")
 
 # ----------------------------------------------------------------------
 # Theme: deep navy-to-blue gradient background, white text, glass
@@ -112,10 +112,10 @@ st.markdown(
         color: #2f80ed !important;
     }
 
-    /* Text input + selectboxes: dark glass style */
+    /* Text input + selectboxes: dark glass style, blue typed text */
     .stTextInput input, .stSelectbox div[data-baseweb="select"] > div {
         background: rgba(255, 255, 255, 0.10) !important;
-        color: #ffffff !important;
+        color: #56ccf2 !important;
         border-radius: 14px !important;
         border: 1px solid rgba(255, 255, 255, 0.22) !important;
     }
@@ -462,8 +462,8 @@ if not GROQ_API_KEY:
 
 title_col, mute_col = st.columns([5, 1])
 with title_col:
-    st.title("🎙️ VidyaAI Tutor")
-    st.caption("Your voice-powered study partner for Classes 8–12.")
+    st.title("🎙️ Voice AI Learning Tutor")
+    st.caption("Classes 8–12 · Speak to learn, get quizzed out loud, and the tutor adapts to you.")
 with mute_col:
     st.toggle("🔇 Mute", key="voice_muted")
     if st.session_state.voice_muted:
